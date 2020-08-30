@@ -1,6 +1,17 @@
 # Start a static web server in a target directory
 > Using one-line solutions instead of scripts
 
+The first solution uses an IDE extension and the rest involve using the command-line.
+
+
+## Live Server extension
+
+1. Install VS Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
+2. Open the repo in VS Code.
+3. Then click the "Go live" button in the bottom right. This will start a dev server for you.
+4. Open the browser at:
+    - http://localhost:5500/
+
 
 ## Python
 
@@ -23,6 +34,7 @@ Start in a subdirectory. The brackets means run in a subshell so you remain wher
 ```sh
 (cd docs && python3 -m http.server)
 ```
+
 
 ## Node
 
@@ -61,8 +73,3 @@ These lists are more detailed and cover other solutions
 
 - [gist](https://gist.github.com/willurd/5720255)
 - [Simple One-line local HTTP servers](https://medium.com/sweetmeat/simple-one-line-local-http-servers-8adb57d93ec3)
-
-
-## IDE
-
-Use VS Code's _Live Server_.
