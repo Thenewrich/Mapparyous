@@ -82,7 +82,7 @@ ruby -run -e httpd . -p 8080
 
 ## References
 
-These lists are more detailed and cover other solutions
+These lists are more detailed and cover other solutions:
 
-- [gist](https://gist.github.com/willurd/5720255)
-- [Simple One-line local HTTP servers](https://medium.com/sweetmeat/simple-one-line-local-http-servers-8adb57d93ec3)
+- [gist by @willurd](https://gist.github.com/willurd/5720255)
+- [Simple One-line local HTTP servers](https://medium.com/sweetmeat/simple-one-line-local-http-servers-8adb57d93ec3) Medium.com post.
