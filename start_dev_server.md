@@ -3,6 +3,14 @@
 
 The first solution uses an IDE extension and the rest involve using the command-line (intended for macOS and Linux, but they will hopefully work on Windows too).
 
+**Table of contents**
+
+- [Live Server extension](#live-server-extension)
+- [Python](#python)
+- [Node](#node)
+- [PHP](#php)
+- [Ruby](#ruby)
+
 
 ## Live Server extension
 
