@@ -53,15 +53,41 @@ Start in a subdirectory. The brackets means run in a subshell so you remain wher
 
 ## Node
 
-### HTTP-server
+There are many ways to do this.
 
+### Builtin
+
+Using the builtin `http` library - from [tutorial](https://www.w3schools.com/nodejs/nodejs_http.asp).
+
+- `index.js`
+    ```js
+    var http = require('http');
+
+    http.createServer(function (req, res) {
+      res.write('Hello World!');
+      res.end();
+    }).listen(8080); 
+    ```
 ```sh
-npm install http-server -g
-http-server -a localhost
+node index.js
 ```
 
-- https://www.npmjs.org/package/glance
-- http://harpjs.com/
+### NPM packages
+
+Here are a couple of packages to install and use.
+
+- [http-server](https://www.npmjs.com/package/http-server)
+    ```sh
+    npm install http-server -g
+    http-server -a localhost
+    ```
+- [simple-server](https://www.npmjs.com/package/simple-server)
+    ```sh
+    npm i -g simple-server
+    simple-server public 3000
+    ```
+- [glance](https://www.npmjs.org/package/glance)
+- [harp](http://harpjs.com/)
 
 
 ## PHP
