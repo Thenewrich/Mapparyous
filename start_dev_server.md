@@ -35,19 +35,19 @@ Install Python 3 - follow [gist](https://gist.github.com/MichaelCurrin/57caae30b
 Start in the current directory on http://localhost:8888 server.
 
 ```sh
-python3 -m http.server
+$ python3 -m http.server
 ```
 
 Add a port and restrict to localhost.
 
 ```sh
-python3 -m http.server 8080 --bind 127.0.0.1
+$ python3 -m http.server 8080 --bind 127.0.0.1
 ```
    
 Start in a subdirectory. The brackets means run in a subshell so you remain where you are when the command is stopped.
 
 ```sh
-(cd docs && python3 -m http.server)
+$ (cd docs && python3 -m http.server)
 ```
 
 
@@ -68,6 +68,7 @@ Using the builtin `http` library - from [tutorial](https://www.w3schools.com/nod
       res.end();
     }).listen(8080); 
     ```
+
 ```sh
 node index.js
 ```
@@ -78,13 +79,19 @@ Here are a couple of packages to install and use.
 
 - [http-server](https://www.npmjs.com/package/http-server)
     ```sh
-    npm install http-server -g
-    http-server -a localhost
+    $ npm i -g http-server
+    $ http-server -a localhost
     ```
 - [simple-server](https://www.npmjs.com/package/simple-server)
     ```sh
-    npm i -g simple-server
-    simple-server public 3000
+    $ npm i -g simple-server
+    $ simple-server public 3000
+    ```
+- [live-server](https://www.npmjs.com/package/live-server)
+    > A great zero-config HTTP server with live reload capability.
+    ```sh
+    $ npm i -g live-server
+    $ live-server
     ```
 - [glance](https://www.npmjs.org/package/glance)
 - [harp](http://harpjs.com/)
@@ -93,16 +100,20 @@ Here are a couple of packages to install and use.
 ## PHP
 
 ```sh
-php -S 127.0.0.1:8000
-# OR
-php -S localhost:8080 -t .
+$ php -S 127.0.0.1:8000
+```
+
+Or
+
+```sh
+$ php -S localhost:8080 -t .
 ```
 
 
 ## Ruby
 
 ```sh
-ruby -run -e httpd . -p 8080
+$ ruby -run -e httpd . -p 8080
 ```
 
 
