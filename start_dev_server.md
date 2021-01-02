@@ -75,7 +75,7 @@ node index.js
 
 ### NPM packages
 
-Here are a couple of packages to install and use.
+Here are a couple of packages you can choose from.
 
 - [http-server](https://www.npmjs.com/package/http-server)
     ```sh
@@ -95,6 +95,13 @@ Here are a couple of packages to install and use.
     ```
 - [glance](https://www.npmjs.org/package/glance)
 - [harp](http://harpjs.com/)
+- [serve-static](https://www.npmjs.com/package/serve-static)
+- [sirv](https://www.npmjs.com/package/sirv) and [sirv-cli](https://github.com/lukeed/sirv/tree/master/packages/sirv-cli)
+    > You may use sirv as a very fast and lightweight alternative to serve-static.
+    ```sh
+    $ npm i -g sirv
+    $ sirv build --port 8080 --cors --single
+    ```
 
 
 ## PHP
