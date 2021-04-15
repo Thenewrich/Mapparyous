@@ -14,19 +14,24 @@ The first solution uses an IDE extension, while the rest involve using the comma
 
 ## Live Server extension
 
+
 1. Install VS Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
 2. Open your repo in VS Code.
-3. In the bottom right, click the "Go live" button to start (or stop) the server at the root of your repo.
-4. Open the browser at:
+4. Start the server.
+    - In the bottom right of the IDE, click the "Go live" button to start (or stop) the server.
+    - Or open the command-prompt pop-up in the IDE and find "Live Server: Open with live server".
+5. Open your browser (this should launch automatically).
     - http://localhost:5500/
 
-Notes on this solution:
+Notes:
 
 - Works on any OS.
 - This doesn't require installing Node, Python, PHP, etc. or working with the CLI, like the options below. 
-- Hot reloading - the browser will refresh to reload a page if you change a file.
-- The downside is that this only works on port `5500` and requires to use VS Code as your IDE and have it open. The options below can be run in a terminal anywhere by anyone, as long as they have the correct dependencies.
-
+- Includes hot reloading - the browser will refresh to reload a page if you change a file.
+- Open a file like `index.html` before starting the server to get the browser to open there. Or you will get a folder view of your directory, which is also fine.
+- Limitations:
+    - This only works on port `5500` and requires to use VS Code as your IDE and have it open. The alternatives below can be run in a terminal anywhere by anyone (without VS Code installed), as long as they have the correct dependencies.
+    - If your `index.html` page and assets are at the **root** of your repo, this works great. But this does **not** work properly if you have assets in a subdirectory because that extension will serve from the root. e.g. If your homepage is in `public/index.html`, then the browser will open at `http://127.0.0.1:5500/public/index.html`, then looking for `/styles.css` will fail. But, you can change the root - a way around this is to open your serving directory as a new window in VS Code. e.g. `code public` and then start the server in that window.
 
 ## Python
 
