@@ -1,7 +1,7 @@
-# Start a static web server in a target directory
-> Using one-line solutions instead of scripts
+# Start a dev server
+> Serve a local static directory of assets - using one-line solutions and not scripts
 
-The first solution uses an IDE extension and the rest involve using the command-line (intended for macOS and Linux, but they will hopefully work on Windows too).
+The first solution uses an IDE extension, while the rest involve using the command-line (intended for macOS and Linux, but they will hopefully work on Windows too).
 
 **Table of contents**
 
