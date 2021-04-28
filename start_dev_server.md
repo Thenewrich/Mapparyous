@@ -1,6 +1,8 @@
 # Start a dev server
 > Serve a local static directory of assets - using one-line solutions and not scripts
 
+<!-- This file exists as gist rather than in a repo or on a site, so it makes it more predictable to link to from multiple repos without worrying about the link breaking. -->
+
 The first solution uses an IDE extension, while the rest involve using the command-line (intended for macOS and Linux, but they will hopefully work on Windows too).
 
 **Table of contents**
@@ -33,6 +35,7 @@ Notes:
     - This only works on port `5500` and requires to use VS Code as your IDE and have it open. The alternatives below can be run in a terminal anywhere by anyone (without VS Code installed), as long as they have the correct dependencies.
     - If your `index.html` page and assets are at the **root** of your repo, this works great. But this does **not** work properly if you have assets in a subdirectory because that extension will serve from the root. e.g. If your homepage is in `public/index.html`, then the browser will open at `http://127.0.0.1:5500/public/index.html`, then looking for `/styles.css` will fail. But, you can change the root - a way around this is to open your serving directory as a new window in VS Code. e.g. `code public` and then start the server in that window.
 
+
 ## Python
 
 Install Python 3 - follow [gist](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23).
@@ -60,9 +63,9 @@ $ (cd docs && python3 -m http.server)
 
 There are many ways to do this.
 
-### Builtin
+### Built-in
 
-Using the builtin `http` library - from [tutorial](https://www.w3schools.com/nodejs/nodejs_http.asp).
+Using the built-in `http` library - from [tutorial](https://www.w3schools.com/nodejs/nodejs_http.asp).
 
 - `index.js`
     ```js
@@ -107,6 +110,14 @@ Here are a couple of packages you can choose from.
     $ npm i -g sirv
     $ sirv build --port 8080 --cors --single
     ```
+- [serve](https://www.npmjs.com/package/serve)
+    - This was recommended to me by React CLI when doing a build.
+    - > Static file serving and directory listing 
+    - Commands
+        ```sh
+        $ npm install -g serve
+        $ serve -s build
+        ```
 
 
 ## PHP
