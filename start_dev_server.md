@@ -40,23 +40,22 @@ Notes:
 
 Install Python 3 - follow [gist](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23).
 
-Start in the current directory on http://localhost:8888 server.
+The Python CLI and the Python standard library are sufficient here - no need to install a package or write a script.
 
-```sh
-$ python3 -m http.server
-```
+Approaches to choose from:
 
-Add a port and restrict to localhost.
-
-```sh
-$ python3 -m http.server 8080 --bind 127.0.0.1
-```
-   
-Start in a subdirectory. The brackets means run in a subshell so you remain where you are when the command is stopped.
-
-```sh
-$ (cd docs && python3 -m http.server)
-```
+- Start in the current directory on port 8000 by default - view on `http://localhost:8888`.
+    ```sh
+    $ python3 -m http.server
+    ```
+- Specify a port and restrict to localhost.
+    ```sh
+    $ python3 -m http.server 8080 --bind 127.0.0.1
+    ```
+- Start in a subdirectory. The brackets makes the commands run in a subshell, so that you remain in same directory as before when the command is stopped.
+    ```sh
+    $ (cd docs && python3 -m http.server)
+    ```
 
 
 ## Node
