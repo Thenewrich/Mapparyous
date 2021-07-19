@@ -40,45 +40,39 @@ Notes:
 
 Install Python 3 - follow [gist](https://gist.github.com/MichaelCurrin/57caae30bd7b0991098e9804a9494c23).
 
-The Python CLI and the Python standard library are sufficient here - no need to install a package or write a script.
+The Python CLI and the Python standard library are light and easy. No need to install a package or write a script!
 
-Approaches to choose from:
+Approaches to choose from using the `http.server` module.
 
 - Start in the current directory on port 8000 by default - view on `http://localhost:8888`.
     ```sh
     $ python3 -m http.server
     ```
-- Specify a port and restrict to localhost.
+- Specify a port and restrict to localhost for security.
     ```sh
     $ python3 -m http.server 8080 --bind 127.0.0.1
     ```
-- Start in a subdirectory. The brackets makes the commands run in a subshell, so that you remain in same directory as before when the command is stopped.
+- Start in a subdirectory, such as `docs` here. The brackets makes the commands run in a _subshell_, so that you remain in same directory as before when the command is stopped.
     ```sh
     $ (cd docs && python3 -m http.server)
     ```
+
+I like to alias the command like this:
+
+```sh
+alias pserver='python3 -m http.server'
+```
+
+Then run it:
+
+```sh
+$ pserver
+```
 
 
 ## Node
 
 There are many ways to do this.
-
-### Built-in
-
-Using the built-in `http` library - from [tutorial](https://www.w3schools.com/nodejs/nodejs_http.asp).
-
-- `index.js`
-    ```js
-    var http = require('http');
-
-    http.createServer(function (req, res) {
-      res.write('Hello World!');
-      res.end();
-    }).listen(8080); 
-    ```
-
-```sh
-node index.js
-```
 
 ### NPM packages
 
