@@ -94,28 +94,38 @@ Here are a couple of packages you can choose from.
     $ npm i -g live-server
     $ live-server
     ```
-- [glance](https://www.npmjs.org/package/glance)
-- [harp](http://harpjs.com/)
-- [serve-static](https://www.npmjs.com/package/serve-static)
-- [sirv](https://www.npmjs.com/package/sirv) and [sirv-cli](https://github.com/lukeed/sirv/tree/master/packages/sirv-cli)
-    > You may use sirv as a very fast and lightweight alternative to `serve-static`.
-    ```sh
-    $ npm i -g sirv
-    $ sirv build --port 8080 --cors --single
-    ```
 - [serve](https://www.npmjs.com/package/serve)
-    - This was recommended to me by React CLI when doing a build.
     - > Static file serving and directory listing 
+    - This was recommended to me by React CLI when doing a build.
+    - Created by the Vercel team.
     - Serves on port 5000.
-    - Commands
+    - Commands.
+        Global install.
         ```sh
         $ npm install -g serve
-        $ serve -s build
+        $ serve
+        $ serve build -s
+        $ serve -p 8080 
         ```
-        Or
+        Without installing.
         ```sh
         $ npx serve
         ```
+- [sirv](https://www.npmjs.com/package/sirv) and [sirv-cli](https://github.com/lukeed/sirv/tree/master/packages/sirv-cli)
+    > You may use sirv as a very fast and lightweight alternative to `serve-static`.
+    ```sh
+    $ npm i sirv -g
+    $ sirv build
+    $ sirv build --port 8080 --cors --single
+    ```
+- [glance](https://www.npmjs.org/package/glance)
+- [harp](http://harpjs.com/)
+- [serve-static](https://www.npmjs.com/package/serve-static)
+
+Notes:
+
+- Single-Page App mode like React, some support a flag like `-s,--single`, that is for . All not-found requests will go to `index.html`.
+- CORS mode - enable CORS to set `Access-Control-Allow-Origin` to `*`.
 
 
 ## PHP
