@@ -1,5 +1,5 @@
 # Start a dev server
-> Serve a local static directory of assets - using one-line solutions and not scripts
+> Serve a local directory of static assets - using one-line solutions and no scripts
 
 <!-- This file exists as gist rather than in a repo or on a site, so it makes it more predictable to link to from multiple repos without worrying about the link breaking. -->
 
@@ -18,11 +18,11 @@ The first solution uses an IDE extension, while the rest involve using the comma
 
 
 1. Install VS Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
-2. Open your repo in VS Code.
-4. Start the server.
+1. Open your repo in VS Code.
+1. Start the server.
     - In the bottom right of the IDE, click the "Go live" button to start (or stop) the server.
     - Or open the command-prompt pop-up in the IDE and find "Live Server: Open with live server".
-5. Open your browser (this should launch automatically).
+1. Open your browser (this should launch automatically).
     - http://localhost:5500/
 
 Notes:
@@ -98,7 +98,7 @@ Here are a couple of packages you can choose from.
 - [harp](http://harpjs.com/)
 - [serve-static](https://www.npmjs.com/package/serve-static)
 - [sirv](https://www.npmjs.com/package/sirv) and [sirv-cli](https://github.com/lukeed/sirv/tree/master/packages/sirv-cli)
-    > You may use sirv as a very fast and lightweight alternative to serve-static.
+    > You may use sirv as a very fast and lightweight alternative to `serve-static`.
     ```sh
     $ npm i -g sirv
     $ sirv build --port 8080 --cors --single
@@ -106,10 +106,15 @@ Here are a couple of packages you can choose from.
 - [serve](https://www.npmjs.com/package/serve)
     - This was recommended to me by React CLI when doing a build.
     - > Static file serving and directory listing 
+    - Serves on port 5000.
     - Commands
         ```sh
         $ npm install -g serve
         $ serve -s build
+        ```
+        Or
+        ```sh
+        $ npx serve
         ```
 
 
