@@ -7,30 +7,38 @@ The first solution uses an IDE extension, while the rest involve using the comma
 
 **Table of contents**
 
-- [Live Server extension](#live-server-extension)
+- [IDE extension](#ide-extension)
 - [Python](#python)
 - [Node](#node)
 - [PHP](#php)
 - [Ruby](#ruby)
 
 
-## Live Server extension
+## IDE extension
 
+Install a live server extension for your IDE.
 
-1. Install VS Code's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
+Most web developers tend to use VS Code, so I'll cover that.
+
+1. Choose one of these, go to the page, and click "Install" there.
+    - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension. Supports a preview in your browser only.
+    - [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension by Microsoft. Supports a preview in the IDE or in your browser. This actually uses the Simple Browser command which is already built-in to VS Code.
 1. Open your repo in VS Code.
 1. Start the server.
     - In the bottom right of the IDE, click the "Go live" button to start (or stop) the server.
-    - Or open the command-prompt pop-up in the IDE and find "Live Server: Open with live server".
-1. Open your browser (this should launch automatically).
+    - Or open the command-prompt pop-up in the IDE and find one of:
+       - "Live Server: Open with live server"
+       - "Live Preview: Start server"
+1. Open your browser (this should launch automatically). For Live Preview, you can skip this step and use the preview pane in VS Code.
     - http://localhost:5500/
 
 Notes:
 
-- Works on any OS.
-- This doesn't require installing Node, Python, PHP, etc. or working with the CLI, like the options below. 
-- Includes hot reloading - the browser will refresh to reload a page if you change a file.
+- This works on any OS.
+- No environment set up needed. No need for installing or learning to CLI commands for runtimes (Node or Python), or any packages (like from NPM).
+- Includes hot-reloading - the browser will refresh to reload a page if you change a file. The Live Preview one even reloads on every change you type, without having to save.
 - Open a file like `index.html` before starting the server to get the browser to open there. Or you will get a folder view of your directory, which is also fine.
+- You might want to install a browser debugger extension for Chrome or Firefox so you can get your debugging in your IDE to work as usual.
 - Limitations:
     - This only works on port `5500` and requires to use VS Code as your IDE and have it open. The alternatives below can be run in a terminal anywhere by anyone (without VS Code installed), as long as they have the correct dependencies.
     - If your `index.html` page and assets are at the **root** of your repo, this works great. But this does **not** work properly if you have assets in a subdirectory because that extension will serve from the root. e.g. If your homepage is in `public/index.html`, then the browser will open at `http://127.0.0.1:5500/public/index.html`, then looking for `/styles.css` will fail. But, you can change the root - a way around this is to open your serving directory as a new window in VS Code. e.g. `code public` and then start the server in that window.
