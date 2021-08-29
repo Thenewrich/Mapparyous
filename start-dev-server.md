@@ -86,6 +86,14 @@ There are many ways to do this.
 
 Here are a couple of packages you can choose from.
 
+The instructions below are for global install but also work at the project level or using `npx` to run without installing (useful if you want to try out a few and get the latest version but slow to call each time.
+
+e.g.
+
+```sh
+$ npx serve
+```
+
 - [http-server](https://www.npmjs.com/package/http-server)
     ```sh
     $ npm i -g http-server
@@ -106,24 +114,19 @@ Here are a couple of packages you can choose from.
     - > Static file serving and directory listing 
     - This was recommended to me by React CLI when doing a build.
     - Created by the Vercel team.
-    - Serves on port 5000.
     - Commands.
         Global install.
         ```sh
-        $ npm install -g serve
+        $ npm i -g serve
         $ serve
-        $ serve build -s
+        $ serve build -s # --single
         $ serve -p 8080 
-        ```
-        Without installing.
-        ```sh
-        $ npx serve
         ```
 - [sirv](https://www.npmjs.com/package/sirv) and [sirv-cli](https://github.com/lukeed/sirv/tree/master/packages/sirv-cli)
     > You may use sirv as a very fast and lightweight alternative to `serve-static`.
     ```sh
     $ npm i sirv -g
-    $ sirv build
+    $ sirv
     $ sirv build --port 8080 --cors --single
     ```
 - [glance](https://www.npmjs.org/package/glance)
