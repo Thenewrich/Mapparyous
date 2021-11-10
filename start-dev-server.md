@@ -94,7 +94,7 @@ $ npx sirv
 
 Here are a couple of NPM packages you can choose from.
 
-- [Static web servers](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/javascript/packages/static-web-servers.md)
+- [Node - Static web servers](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/javascript/packages/static-web-servers.html)
 
 
 ## PHP
