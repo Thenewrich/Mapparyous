@@ -89,7 +89,7 @@ $ npx serve
 ```
 
 ```sh
-$ npx sirv
+$ npx sirv-cli
 ```
 
 Here are a couple of NPM packages you can choose from.
